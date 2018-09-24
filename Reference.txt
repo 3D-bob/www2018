@@ -1,0 +1,7 @@
+<h1> Images </h1>
+<p> image URL <img src="https://img-b.foreca.net/i/l/foreca_logo.png" alt= "test"></p>
+<p> local image <img src="images/AR1_01.png" alt= "random image"></p>
+
+<p> Link to portfolio, doesn't open a new window 
+<a href="https://3dbob.carbonmade.com/"> Link </a>
+</p>
