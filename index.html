@@ -22,7 +22,7 @@
 	</script>
 	
 	<script>
-		var x = document.getElementById("demo");
+		var x = document.getElementById("geolocation");
 
 		function getLocation() {
 			if (navigator.geolocation) {
@@ -34,7 +34,7 @@
 
 		function showLocation(location) {
 			alert("Latitude: " + location.coords.latitude + 
-			"<br>Longitude: " + location.coords.longitude);
+			" Longitude: " + location.coords.longitude);
 		}
 
 		function showError(error) {
@@ -129,7 +129,7 @@
 	
 	<button onclick="getLocation()">Get geolocation</button>
 
-	<p id="demo"></p>
+	<p id="geolocation"></p>
 	
 	<h1 id="entry3"> Entry3 </h1>
 	<p> asdasdddddddd ddddddddddd aaaaaaaaaa ssssssssss ddddddddddd ssssssss aaaaaaaaa ddd
