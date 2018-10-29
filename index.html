@@ -28,13 +28,13 @@
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(showLocation);
 			} else { 
-				x.innerHTML = "Geolocation is not supported by this browser.";
+				alert("Geolocation is not supported by this browser.");
 			}
 		}
 
 		function showLocation(location) {
-			x.innerHTML = "Latitude: " + location.coords.latitude + 
-			"<br>Longitude: " + location.coords.longitude;
+			alert("Latitude: " + location.coords.latitude + 
+			"<br>Longitude: " + location.coords.longitude);
 		}
 
 		function showError(error) {
