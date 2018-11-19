@@ -100,7 +100,7 @@ body {
 
 #mainpage {
 	float: left;
-	width: 700px;
+	width: 900px;
 	height: auto;
 	padding: 9px 15px 0px 15px;
 	margin: 100px 0px 0px 250px;
@@ -169,5 +169,15 @@ table#t1 td{
 	border-collapse: collapse;
 	padding: 5px;
 	text-align: center;	
+}
 
+#DD {
+    float: left;
+    width: 256px;
+    height: 256px;
+    margin: 10px;
+    padding: 10px;
+	border: 1px solid black;
+}
+    
 
