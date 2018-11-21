@@ -3,53 +3,35 @@
 <html>
 
 <head>
-	<script>
-	function validateForm() {
-		if (document.forms["myForm"]["name"].value==null || document.forms["myForm"]["name"].value=="")	{
-	alert("You must type in a name");
-	return false;
-	}
-		if (document.forms["myForm"]["phone"].value==null || document.forms["myForm"]["phone"].value=="") {
-	alert("Type in phone number");
-	return false;
-	}
-		if (document.forms["myForm"]["email"].value==null || document.forms["myForm"]["email"].value=="") {
-	alert("Give an email");
-	return false;
-	}
-	return true;
-	}
-	</script>
-	
-	<script>
-		var x = document.getElementById("demo");
+<script>
+	var x = document.getElementById("demo");
 
-function getLocation() {
+	function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+	}
+
+	function showPosition(position) {
+		alert("Latitude:" + position.coords.latitude + 
+		", Longitude:" + position.coords.longitude);
 }
 
-function showPosition(position) {
-    alert("Latitude:" + position.coords.latitude + 
-    ", Longitude:" + position.coords.longitude);
-}
-
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+				x.innerHTML = "User denied the request for Geolocation."
             break;
-        case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
+			case error.POSITION_UNAVAILABLE:
+				x.innerHTML = "Location information is unavailable."
             break;
-        case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
+			case error.TIMEOUT:
+				x.innerHTML = "The request to get user location timed out."
             break;
-        case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
+			case error.UNKNOWN_ERROR:
+				x.innerHTML = "An unknown error occurred."
             break;
     }
 }
@@ -82,55 +64,38 @@ function showError(error) {
 
 <ul id="topmenu">
 	<li><a class="active" href="#main">Main</a></li>
-	<li><a href="#about">About</a></li>
-	<li><a href="#contact">Contact</a></li>
+	<li><a href="contact.html">Contact</a></li>
 </ul>
 <!-- Top Menu end -->
 
 <!-- Side Menu start -->
 <ul id="sidebar">
 	<li><a href="#imgint">1. Image integration</a></li>
-	<li><a href="#table1">2a. Table 1</a></li>
-	<li><a href="#table2">2b. Table 2</a></li>
-	<li><a href="#form1">3a. Form Example</a></li>
-	<li><a href="#form2">3b. Form Validation</a></li>
-	<li><a href="#geo">4. Geolocation</a></li>
-	<li><a href="#dragdrop">5. Drag and Drop</a></li>
-	<li><a href="#video1">6a. Video Integration</a></li>
-	<li><a href="#video2">6b. Youtube Video</a></li>
+	<li><a href="#table1">2. Table </a></li>
+	<li><a href="#geo">3. Geolocation</a></li>
+	<li><a href="#dragdrop">4. Drag and Drop</a></li>
+	<li><a href="#video">5. Video Integration</a></li>
 </ul>
 <!-- Side Menu end --> 
 
 <div id="mainpage">
 	<h1 id="imgint"> 1. Image integration </h1>
-	<p> In this paragraph you can see a picture of a thing that goes pew pew. I'm just writing this text to
-	fill the page a bit more. But for some reason I'm doing it manually rather than using lorem ipsum or copying some
-	existing garbo to fill it in faster.
+	<p> In this paragraph you can see a picture of a thing that goes pew pew. I took the image integration a bit farther
+	and decided to also integrate a 3d model from sketchfab that I made.
 	</p>
 	<img src="images/AR1_01.png" alt="Render of a 3d model">
 	
-	<h1 id="table1"> 2a. Table 1 </h1>
+	<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/a7bbdda6a05f4654b9a6fca12d864db4/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/models/a7bbdda6a05f4654b9a6fca12d864db4?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Warhammer</a>
+    by <a href="https://sketchfab.com/3d_Bob?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">4d_Bob</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+	
+	<h1 id="table1"> 2. Table </h1>
 	<p> In this paragraph you can see a table of unknown content. It is just an example so there is no need to be concerned about what mind-boggling data it might hold.</p>
-		<table style="width: 50%">
-			<tr>
-				<th> Axis</th>
-				<th> x-coord</th>
-				<th> y-coord</th>
-			</tr>
-			<tr>
-				<td>x</td>
-				<td>1</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>y</td>
-				<td>5</td>
-				<td>3</td>
-			</tr>
-		</table>
-		
-	<h1 id="table2"> 2b. Table 2 </h1>
-	<p> In this paragraph you can see that tables might come in different colors and sizes. Super interesting stuff isn't it?</p>
 		<table id="t1">
 			<caption> A Table </caption>
 			<tr>
@@ -150,38 +115,8 @@ function showError(error) {
 				<td>6,7</td>
 			</tr>
 		</table>
-	
-	<h1 id="form1">3a. Form Example </h1>
-	<p> In this paragraph you can fill in a form and leave a comment. You may also choose your gender. Please note that there are only two options since
-	there are only two genders. That's a fact.</p>
-	<form>
-		First Name:<br>
-		<input type="text" name= "fname"><br>
-		Last name:<br>
-		<input type="text" name="lname"><br>
-		E-mail:<br>
-		<input type="email" name="email"><br>
-		<br>
-		Gender:<input type="radio" name="gender" value="male" checked> Male <br>
-		Gender:<input type="radio" name="gender" value="female"> Female <br>	
-		<br>
-		Comment:<br>
-		<textarea rows="10" cols="50"></textarea>
-		<br>
-		<input type="submit" value="Submit">
-	</form>
-	
-	<h1 id="form2">3b. Form Validation </h1>
-	<p> Here's another form but this one is special. It actually uses validation. High-tech shit am I right?</p>
-	<form name="myForm" onsubmit="return validateForm()">
-	Name:<br><input type="text" name="name" /><br/>
-	Phone: <br><input type="text" name="phone" /><br/>
-	E-mail: <br><input type="text" name="email" /><br/>
-	<br>
-	<input type="submit" value="Click to Submit" />
-	</form>
-	
-	<h1 id="geo">4. Geolocation </h1>
+		
+	<h1 id="geo">3. Geolocation </h1>
 	<p> In this section you can click the button below to pinpoint your location and order a package of foul smelling excrement right to your doorstep. 
 	Be wary of our strict no return policy though.</p>
 	
@@ -189,7 +124,7 @@ function showError(error) {
 
 	<p id="geolocation"></p>
 	
-	<h1 id="dragdrop">5. Drag and Drop </h1>
+	<h1 id="dragdrop">4. Drag and Drop </h1>
 	<p> You can drag this dude around. But beware! He might not like it.</p>
 
 	<div id ="DD"  ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -198,14 +133,7 @@ function showError(error) {
 	<div id ="DD"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
 	<div id ="DD"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
 	
-	<h1 id="video1">6. Video Integration </h1>
-	<p> In this paragraph you can see that there is an unexisting video file here. How did it get past the security?</p>
-	<video width="320" height="240" controls>
-		<source src="movie.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	
-	<h1 id="video2"> Youtube video Integration </h1>
+	<h1 id="video"> 5.Video Integration </h1>
 	<p> Please take your time to watch this video that will completely turn your life around.</p>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/-xYhy8HTXP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		
