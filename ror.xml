@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://3d-bob.github.io/www2018/</title>
+  <link>https://3d-bob.github.io/www2018/</link>
+
+<item>
+     <link>https://3d-bob.github.io/www2018/</link>
+     <title>A magnificient web page - The best web page you'll ever visit</title>
+     <description>An epic layout for your very own website. Amazing color theme that doesn't hurt your eyes when you just can't leave this web page</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://3d-bob.github.io/www2018/contact.html</link>
+     <title>A magnificient web page - contact</title>
+     <description>An epic layout for your very own website. Amazing color theme that doesn't hurt your eyes when you just can't leave this web page</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://3d-bob.github.io/www2018/index.html</link>
+     <title>A magnificient web page - The best web page you'll ever visit</title>
+     <description>An epic layout for your very own website. Amazing color theme that doesn't hurt your eyes when you just can't leave this web page</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
