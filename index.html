@@ -75,14 +75,13 @@
 	<li><a href="#table1">2. Table </a></li>
 	<li><a href="#geo">3. Geolocation</a></li>
 	<li><a href="#dragdrop">4. Drag and Drop</a></li>
-	<li><a href="#video">5. Video Integration</a></li>
+	<li><a href="#video">5. Audio&Video</a></li>
 </ul>
 <!-- Side Menu end --> 
 
 <div id="mainpage">
 	<h1 id="imgint"> 1. Image integration </h1>
-	<p> In this paragraph you can see a picture of a thing that goes pew pew. I took the image integration a bit farther
-	and decided to also integrate a 3d model from sketchfab that I made.
+	<p> Here's an image. Also decided to try integrating a model from sketchfab.
 	</p>
 	<img src="images/AR1_01.png" alt="Render of a 3d model">
 	
@@ -118,10 +117,9 @@
 		</table>
 		
 	<h1 id="geo">3. Geolocation </h1>
-	<p> In this section you can click the button below to pinpoint your location and order a package of foul smelling excrement right to your doorstep. 
-	Be wary of our strict no return policy though.</p>
+	<p> Click the button to get your location.</p>
 	
-	<button onclick="getLocation()">Place order to my location</button>
+	<button onclick="getLocation()">Get located</button>
 
 	<p id="geolocation"></p>
 	
@@ -134,9 +132,15 @@
 	<div id ="DD"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
 	<div id ="DD"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
 	
-	<h1 id="video"> 5.Video Integration </h1>
+	<h1 id="video"> 5. Audio and video Integration </h1>
 	<p> Please take your time to watch this video that will completely turn your life around.</p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/-xYhy8HTXP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-xYhy8HTXP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</p>
+	<p>Also listen to this incredible audio clip.</p>
+	<audio controls>
+	<source src="ebinsound.wav" type="audio/wav">
+	Your browser does not support the audio element.
+	</audio>
 		
 </div>
 
